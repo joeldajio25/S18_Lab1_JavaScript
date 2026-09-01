@@ -1,5 +1,22 @@
 function genererContenu() {
   // Obtenir l'élément avec l'id démo et lui ajouter des éléments h2 et p
+  const demo = document.getElementById("demo");
+  const qty = Number(document.getElementById("qty").value);
+  const titre = document.getElementById("titre").value;
+  const contenu = document.getElementById("contenu").value;
+
+  demo.innerHTML = "";
+
+  for(let i = 0; i < qty; i++){
+    const h2 = document.createElement("h2");
+    h2.textContent = titre + " " + i;
+
+    const p = document.createElement("p");
+    p.textContent = contenu + " " + i;
+
+    demo.appendChild(h2);
+    demo.appendChild(p);
+  }
 }
   
 function changerStyle() {
