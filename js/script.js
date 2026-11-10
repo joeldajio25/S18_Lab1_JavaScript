@@ -32,4 +32,9 @@ function changerStyle() {
   
 function changerClassBoutons() {
   // Obtenir les éléments boutons et changer leur className pour celui qui est spécifié dans l'input
+  const boutons = document.getElementsByTagName("button");
+  const classe = document.getElementById("btnClass").value;
+  for(let i =0; i < boutons.length; i++){
+    boutons[i].className = classe;
+  }
 }
