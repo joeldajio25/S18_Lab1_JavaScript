@@ -21,6 +21,13 @@ function genererContenu() {
   
 function changerStyle() {
   // Obtenir les éléments p qui sont sous le div demo et changer la couleur spécifiée dans l'input
+  const couleur = document.getElementById("couleur").value;
+   const demo = document.getElementById("demo");
+  const paragraphes = demo.getElementsByTagName("p")
+
+  for(let i = 0; i < paragraphes.length; i++){
+    paragraphes[i].style.color = couleur;
+  }
 }
   
 function changerClassBoutons() {
